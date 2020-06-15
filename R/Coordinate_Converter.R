@@ -22,6 +22,10 @@
 #' @import Biostrings
 #' @import gwascat
 #' @import liftOver
+#' @import GenomeInfoDb
+#' @import GenomicRanges
+#' @import IRanges
+#' @import S4Vectors
 #'
 #'
 #' @examples
