@@ -29,7 +29,8 @@ download_GFF_fromURI<-function(GFFURI){
 #' @return
 #' @export
 #'
-#'
+#' @examples
+#' GFFDataload(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))
 GFFDataload <- function(gff_File){
 
   if(exists("txDBPath") & file.exists("txDBPath")  & !exists("txdb")){

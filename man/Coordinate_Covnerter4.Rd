@@ -20,3 +20,6 @@ dataframe which contians corresponding HUGO symbol, exon number.
 This function take genomic location as input and convert these to a dataframe which contains
 corresponding HUGO symbol and exon number.
 }
+\examples{
+DF4 <- Coordinate_Covnerter4("chrX",48823056,48823056)
+}

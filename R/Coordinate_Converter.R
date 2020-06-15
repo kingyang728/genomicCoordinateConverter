@@ -29,7 +29,8 @@
 #'
 #'
 #'
-#'
+#' @examples
+#' DF1 <- Coordinate_Covnerter1("chrX",48823056,48823056,"G","C")
 #'
 Coordinate_Covnerter1<-function(chromosome,genomic_start,genomic_end,refAllele,varAllele,strand){
 
@@ -112,6 +113,8 @@ Coordinate_Covnerter1<-function(chromosome,genomic_start,genomic_end,refAllele,v
 #' @return  dataframe which contians corresponding HUGO Symbol, transcript ID, position exchanged amino acid.
 #' @export
 #'
+#' @examples
+#' DF2 <- Coordinate_Covnerter2("chrX",48823056,48823056,"G","C")
 
 Coordinate_Covnerter2<-function(chromosome,genomic_start,genomic_end,refAllele,varAllele,strand){
   ################
@@ -171,6 +174,8 @@ Coordinate_Covnerter2<-function(chromosome,genomic_start,genomic_end,refAllele,v
 #' @return  dataframe which contians corresponding HUGO Symbol, list of all transcript ID.
 #' @export
 #'
+#' @examples
+#' DF3 <- Coordinate_Covnerter3("chrX",48823056,48823056)
 
 Coordinate_Covnerter3<-function(chromosome,genomic_start,genomic_end){
   ################
@@ -211,6 +216,8 @@ Coordinate_Covnerter3<-function(chromosome,genomic_start,genomic_end){
 #' @return dataframe which contians corresponding HUGO symbol, exon number.
 #' @export
 #'
+#' @examples
+#' DF4 <- Coordinate_Covnerter4("chrX",48823056,48823056)
 
 Coordinate_Covnerter4<-function(chromosome,genomic_start,genomic_end){
   ################
@@ -250,6 +257,8 @@ Coordinate_Covnerter4<-function(chromosome,genomic_start,genomic_end){
 #' @return  dataframe which contians corresponding genomic position, codon and codon's number.
 #' @export
 #'
+#' @examples
+#' DF5_1<-Coordinate_Covnerter5_1("HDAC6-201",2657,2657)
 
 Coordinate_Covnerter5_1<-function(transcript_id,TX_start,TX_end){
   ################
@@ -304,6 +313,8 @@ Coordinate_Covnerter5_1<-function(transcript_id,TX_start,TX_end){
 #' @return  dataframe which contians corresponding genomic position, codon and codon's number.
 #' @export
 #'
+#' @examples
+#' DF5_2<-Coordinate_Covnerter5_2("ENST00000334136",2657)
 
 Coordinate_Covnerter5_2<-function(transcript_id,TX_position){
   ################
@@ -372,7 +383,8 @@ Coordinate_Covnerter5_2<-function(transcript_id,TX_position){
 #' @return  dataframe which contians corresponding converted target genome coordinate.
 #' @export
 #'
-#'
+#' @examples
+#' DF6 <- Coordinate_Covnerter6("chrX",45060024,45060024,"hg16","hg18")
 
 Coordinate_Covnerter6<-function(chromosome,genomic_start,genomic_end,genomeVersion,targetGenomeVersion){
 

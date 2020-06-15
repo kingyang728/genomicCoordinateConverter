@@ -15,3 +15,6 @@ GFFDataload(gff_File)
 \description{
 Generate TxDB, gff dataframe, cds_gff dataframe based on gff file
 }
+\examples{
+GFFDataload(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))
+}

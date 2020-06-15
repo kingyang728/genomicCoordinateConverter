@@ -30,3 +30,6 @@ dataframe which contians corresponding converted target genome coordinate.
 This function take genomic location, orginal and target genome version as input and convert these to a dataframe which contains
 corresponding genomic position.
 }
+\examples{
+DF6 <- Coordinate_Covnerter6("chrX",45060024,45060024,"hg16","hg18")
+}

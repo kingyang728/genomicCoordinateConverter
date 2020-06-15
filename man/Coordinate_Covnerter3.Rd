@@ -20,3 +20,6 @@ dataframe which contians corresponding HUGO Symbol, list of all transcript ID.
 This function take genomic location as input and convert these to a dataframe which contains
 corresponding HUGO Symbol, list of all transcript ID.
 }
+\examples{
+DF3 <- Coordinate_Covnerter3("chrX",48823056,48823056)
+}

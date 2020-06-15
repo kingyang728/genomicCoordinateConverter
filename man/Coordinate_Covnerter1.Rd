@@ -33,3 +33,7 @@ dataframe which contians corresponding HUGO Symbol, transcript ID, position in p
 This function take genomic location,  nucleotide exchange as input and convert these to a dataframe which contains
 HUGO Symbol, transcript ID, position in primary transcript, exchanged amino acid.
 }
+\examples{
+DF1 <- Coordinate_Covnerter1("chrX",48823056,48823056,"G","C")
+
+}

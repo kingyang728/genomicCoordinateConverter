@@ -18,3 +18,6 @@ dataframe which contians corresponding genomic position, codon and codon's numbe
 This function take transcript id and transcript location as input and convert these to a dataframe which contains
 corresponding genomic position, codon and codon's number.
 }
+\examples{
+DF5_2<-Coordinate_Covnerter5_2("ENST00000334136",2657)
+}
