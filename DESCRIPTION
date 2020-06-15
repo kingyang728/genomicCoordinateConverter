@@ -29,4 +29,5 @@ Imports: BSgenome.Hsapiens.UCSC.hg38,
          IRanges,
          S4Vectors,
          GenomeInfoDb,
-         Biostrings
+         Biostrings,
+         R.utils

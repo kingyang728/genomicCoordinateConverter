@@ -1,0 +1,65 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# genomicCoordinateConverter
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of genomicCoordinateConverter is to provide functionalities supporting convert coordinate to amino acid information.The package contains 6 main converter functionalities:
+  genomic location (default genome: HG38), nucleotide exchange -> HUGO Symbol, transcript ID, position in primary transcript, exchanged amino acid
+  genomic location (default genome: HG38), nucleotide exchange -> HUGO Symbol, for all transcripts :transcript ID, position exchanged amino acid
+  genomic location (default genome: HG38) -> HUGO Symbol, list of all transcript ID
+  genomic location (default genome: HG38), nucleotide exchange ->  HUGO symbol, exon number
+  transcript ID, position , target genome -> genomic location, triplet and number in triplet
+  Genomeversion, genomic location, taget genomeversion -> genomic location
+
+## Installation
+
+You can install the released version of genomicCoordinateConverter from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("genomicCoordinateConverter")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("kingyang728/genomicCoordinateConverter")
+```
+## Example
+
+This is a basic example which shows you how to convert genomic coordinate to target dataframe:
+
+```{r example}
+library(genomicCoordinateConverter)
+## basic example code
+#genomic location,  nucleotide exchange -> HUGO Symbol, transcript ID, position in primary transcript, exchanged amino acid
+Coordinate_Covnerter1("chrX",48823056,48823056,"G","C")
+#genomic location, nucleotide exchange -> HUGO Symbol, for all transcripts :transcript ID, position exchanged amino acid
+Coordinate_Covnerter2("chrX",48823056,48823056,"G","C")
+#genomic location -> HUGO Symbol, list of all transcript ID
+Coordinate_Covnerter3("chrX",48823056,48823056)
+#genomic location (default genome: HG38), nucleotide exchange ->  HUGO symbol, exon number
+Coordinate_Covnerter4("chrX",48823056,48823056)
+#transcript ID, position , target genome -> genomic location, triplet and number in triplet
+##transcript id passed in should be ensembl transcript id like "ENST00000334136"
+Coordinate_Covnerter5_2("ENST00000334136",2657)
+#Genomeversion, genomic location, taget genomeversion -> genomic location
+Coordinate_Covnerter6("chrX",45060024,45060024,"hg16","hg18")
+```
+
+
