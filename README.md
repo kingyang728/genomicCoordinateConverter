@@ -9,16 +9,16 @@
 
 The goal of genomicCoordinateConverter is to provide functionalities
 supporting convert coordinate to amino acid information.The package
-contains 6 main converter functionalities: <br/> ‘*’ genomic location
+contains 6 main converter functionalities: <br/> \* genomic location
 (default genome: HG38), nucleotide exchange -\> HUGO Symbol, transcript
-ID, position in primary transcript, exchanged amino acid <br/> ’*’
+ID, position in primary transcript, exchanged amino acid <br/> \*
 genomic location (default genome: HG38), nucleotide exchange -\> HUGO
 Symbol, for all transcripts :transcript ID, position exchanged amino
-acid <br/> ‘*’ genomic location (default genome: HG38) -\> HUGO Symbol,
-list of all transcript ID <br/> ’*’ genomic location (default genome:
-HG38), nucleotide exchange -\> HUGO symbol, exon number <br/> ‘*’
+acid <br/> \* genomic location (default genome: HG38) -\> HUGO Symbol,
+list of all transcript ID <br/> \* genomic location (default genome:
+HG38), nucleotide exchange -\> HUGO symbol, exon number <br/> \*
 transcript ID, position , target genome -\> genomic location, triplet
-and number in triplet <br/> ’*’ Genomeversion, genomic location, taget
+and number in triplet <br/> \* Genomeversion, genomic location, taget
 genomeversion -\> genomic location <br/>
 
 ## Installation
@@ -38,8 +38,6 @@ coordinate to target dataframe:
 
 ``` r
 library(genomicCoordinateConverter)
-#> Warning: replacing previous import 'R.utils::header' by
-#> 'VariantAnnotation::header' when loading 'genomicCoordinateConverter'
 #> 
 #> 
 ## basic example code

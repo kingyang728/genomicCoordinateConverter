@@ -12,7 +12,6 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-
 # genomicCoordinateConverter
 
 <!-- badges: start -->
@@ -49,7 +48,7 @@ Coordinate_Covnerter2("chrX",48823056,48823056,"G","C")
 Coordinate_Covnerter3("chrX",48823056,48823056)
 #genomic location (default genome: HG38), nucleotide exchange ->  HUGO symbol, exon number
 Coordinate_Covnerter4("chrX",48823056,48823056)
-#transcript ID, position , target genome -> genomic location, triplet and number in triplet
+##transcript ID, position , target genome -> genomic location, triplet and number in triplet
 ##transcript id passed in should be ensembl transcript id like "ENST00000334136"
 Coordinate_Covnerter5_2("ENST00000334136",2657)
 #Genomeversion, genomic location, taget genomeversion -> genomic location
