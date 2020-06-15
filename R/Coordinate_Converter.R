@@ -18,9 +18,9 @@
 #' @import BSgenome.Hsapiens.UCSC.hg38
 #' @import biomaRt
 #' @import rtracklayer
-#' @import AnnotationDbi
 #' @import Biostrings
 #' @import gwascat
+#' @import AnnotationDbi
 #' @import liftOver
 #' @import GenomeInfoDb
 #' @import GenomicRanges
