@@ -15,3 +15,6 @@ GFFDataload(gff_File)
 \description{
 Generate TxDB, gff dataframe, cds_gff dataframe based on gff file
 }
+\examples{
+GFFDataload("~/Downloads/GIT/Tmp_Data/Homo_sapiens.GRCh38.99.gff3.gz")
+}

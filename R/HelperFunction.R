@@ -6,6 +6,7 @@
 #' @export
 #'
 #' @examples
+#' gff_File<-download_GFF_fromURI("ftp://ftp.ensembl.org/pub/release-100/gff3/homo_sapiens/Homo_sapiens.GRCh38.100.gff3.gz")
 download_GFF_fromURI<-function(GFFURI){
 
   path = system.file(package="genomicCoordinateConverter", "extdata")
@@ -29,6 +30,7 @@ download_GFF_fromURI<-function(GFFURI){
 #' @export
 #'
 #' @examples
+#' GFFDataload("~/Downloads/GIT/Tmp_Data/Homo_sapiens.GRCh38.99.gff3.gz")
 GFFDataload <- function(gff_File){
 
   if(exists("txDBPath") & file.exists("txDBPath")  & !exists("txdb")){
@@ -69,7 +71,7 @@ GFFDataload <- function(gff_File){
 #' @return selected dataframe according to chr, genomic start and end coordinate.
 #' @export
 #'
-#' @examples
+#'
 Coordinate_Mapping_gffTB <- function(chr,start_pos,end_pos,gff_Table){
   #start_pos<-78755835
   #end_pos<-78755835
@@ -93,7 +95,7 @@ Coordinate_Mapping_gffTB <- function(chr,start_pos,end_pos,gff_Table){
 #' @return coding table with corresponding transcript id
 #' @export
 #'
-#' @examples
+#'
 Coordinate_to_transcriptTB<-function(CodingTable,GFFCDSTable){
 
   GFFCDSTable$transcript_id<-gsub(pattern = "^.*:",replacement = "",GFFCDSTable$Parent)
@@ -127,7 +129,7 @@ Coordinate_to_transcriptTB<-function(CodingTable,GFFCDSTable){
 #' @return full merged transcript-coding table
 #' @export
 #'
-#' @examples
+#'
 Coordinate_to_codingTranscriptTB<-function(CodingTable,gff_DataTable){
   #CodingTable<-codingTB
   seqnames<-CodingTable$seqnames
@@ -176,7 +178,7 @@ Coordinate_to_codingTranscriptTB<-function(CodingTable,gff_DataTable){
 #' @return table with coorespoding codons and codons number
 #' @export
 #'
-#' @examples
+#'
 Coordinate_to_codons<-function(chr,start_pos,end_pos,GFFCDSTable){
   #chr = genomicCoordTB$seqnames
   #start_pos=genomicCoordTB$start

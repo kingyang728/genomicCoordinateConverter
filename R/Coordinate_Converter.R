@@ -26,9 +26,11 @@
 #' @import GenomicRanges
 #' @import IRanges
 #' @import S4Vectors
+#' @importFrom dplyr select
 #'
 #'
-#' @examples
+#'
+#'
 Coordinate_Covnerter1<-function(chromosome,genomic_start,genomic_end,refAllele,varAllele,strand){
 
   ################
@@ -110,7 +112,7 @@ Coordinate_Covnerter1<-function(chromosome,genomic_start,genomic_end,refAllele,v
 #' @return  dataframe which contians corresponding HUGO Symbol, transcript ID, position exchanged amino acid.
 #' @export
 #'
-#' @examples
+
 Coordinate_Covnerter2<-function(chromosome,genomic_start,genomic_end,refAllele,varAllele,strand){
   ################
   ######Load Data
@@ -162,14 +164,14 @@ Coordinate_Covnerter2<-function(chromosome,genomic_start,genomic_end,refAllele,v
 #' corresponding HUGO Symbol, list of all transcript ID.
 #'
 #'
-#' @param chromosome
-#' @param genomic_start
-#' @param genomic_end
+#' @param chromosome  sequence name like "chrX"
+#' @param genomic_start  genomic start position
+#' @param genomic_end  genomic end position
 #'
 #' @return  dataframe which contians corresponding HUGO Symbol, list of all transcript ID.
 #' @export
 #'
-#' @examples
+
 Coordinate_Covnerter3<-function(chromosome,genomic_start,genomic_end){
   ################
   ######Load Data
@@ -209,7 +211,7 @@ Coordinate_Covnerter3<-function(chromosome,genomic_start,genomic_end){
 #' @return dataframe which contians corresponding HUGO symbol, exon number.
 #' @export
 #'
-#' @examples
+
 Coordinate_Covnerter4<-function(chromosome,genomic_start,genomic_end){
   ################
   ######Load Data
@@ -248,7 +250,7 @@ Coordinate_Covnerter4<-function(chromosome,genomic_start,genomic_end){
 #' @return  dataframe which contians corresponding genomic position, codon and codon's number.
 #' @export
 #'
-#' @examples
+
 Coordinate_Covnerter5_1<-function(transcript_id,TX_start,TX_end){
   ################
   ######Load Data
@@ -302,7 +304,7 @@ Coordinate_Covnerter5_1<-function(transcript_id,TX_start,TX_end){
 #' @return  dataframe which contians corresponding genomic position, codon and codon's number.
 #' @export
 #'
-#' @examples
+
 Coordinate_Covnerter5_2<-function(transcript_id,TX_position){
   ################
   ######Load Data
@@ -371,7 +373,7 @@ Coordinate_Covnerter5_2<-function(transcript_id,TX_position){
 #' @export
 #'
 #'
-#' @examples
+
 Coordinate_Covnerter6<-function(chromosome,genomic_start,genomic_end,genomeVersion,targetGenomeVersion){
 
   #genomeVersion="hg38"

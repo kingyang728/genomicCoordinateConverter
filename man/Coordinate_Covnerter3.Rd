@@ -7,7 +7,11 @@
 Coordinate_Covnerter3(chromosome, genomic_start, genomic_end)
 }
 \arguments{
-\item{genomic_end}{}
+\item{chromosome}{sequence name like "chrX"}
+
+\item{genomic_start}{genomic start position}
+
+\item{genomic_end}{genomic end position}
 }
 \value{
 dataframe which contians corresponding HUGO Symbol, list of all transcript ID.

@@ -15,3 +15,6 @@ gff file downloaded path.
 \description{
 Download gff file from URI
 }
+\examples{
+gff_File<-download_GFF_fromURI("ftp://ftp.ensembl.org/pub/release-100/gff3/homo_sapiens/Homo_sapiens.GRCh38.100.gff3.gz")
+}
