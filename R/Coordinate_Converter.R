@@ -36,11 +36,15 @@ Coordinate_Covnerter1<-function(chromosome,genomic_start,genomic_end,refAllele,v
 
   ################
   ######Load Data
-  if(!exists("gff_File")){
-    GFFURI ="ftp://ftp.ensembl.org/pub/release-100/gff3/homo_sapiens/Homo_sapiens.GRCh38.100.gff3.gz"
-    gff_File<<-download_GFF_fromURI(GFFURI)
-    GFFDataload(gff_File)
-  }
+    if(!exists("gff_File") & file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
+      gff_File <<- system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz")
+      GFFDataload(gff_File)
+    }
+    else if(!exists("gff_File") & !file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
+      GFFURI ="ftp://ftp.ensembl.org/pub/release-100/gff3/homo_sapiens/Homo_sapiens.GRCh38.100.gff3.gz"
+      gff_File<<-download_GFF_fromURI(GFFURI)
+      GFFDataload(gff_File)
+    }
   else {
     GFFDataload(gff_File)
 
@@ -119,7 +123,11 @@ Coordinate_Covnerter1<-function(chromosome,genomic_start,genomic_end,refAllele,v
 Coordinate_Covnerter2<-function(chromosome,genomic_start,genomic_end,refAllele,varAllele,strand){
   ################
   ######Load Data
-  if(!exists("gff_File")){
+  if(!exists("gff_File") & file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
+    gff_File <<- system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz")
+    GFFDataload(gff_File)
+  }
+  else if(!exists("gff_File") & !file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
     GFFURI ="ftp://ftp.ensembl.org/pub/release-100/gff3/homo_sapiens/Homo_sapiens.GRCh38.100.gff3.gz"
     gff_File<<-download_GFF_fromURI(GFFURI)
     GFFDataload(gff_File)
@@ -180,7 +188,11 @@ Coordinate_Covnerter2<-function(chromosome,genomic_start,genomic_end,refAllele,v
 Coordinate_Covnerter3<-function(chromosome,genomic_start,genomic_end){
   ################
   ######Load Data
-  if(!exists("gff_File")){
+  if(!exists("gff_File") & file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
+    gff_File <<- system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz")
+    GFFDataload(gff_File)
+  }
+  else if(!exists("gff_File") & !file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
     GFFURI ="ftp://ftp.ensembl.org/pub/release-100/gff3/homo_sapiens/Homo_sapiens.GRCh38.100.gff3.gz"
     gff_File<<-download_GFF_fromURI(GFFURI)
     GFFDataload(gff_File)
@@ -222,7 +234,11 @@ Coordinate_Covnerter3<-function(chromosome,genomic_start,genomic_end){
 Coordinate_Covnerter4<-function(chromosome,genomic_start,genomic_end){
   ################
   ######Load Data
-  if(!exists("gff_File")){
+  if(!exists("gff_File") & file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
+    gff_File <<- system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz")
+    GFFDataload(gff_File)
+  }
+  else if(!exists("gff_File") & !file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
     GFFURI ="ftp://ftp.ensembl.org/pub/release-100/gff3/homo_sapiens/Homo_sapiens.GRCh38.100.gff3.gz"
     gff_File<<-download_GFF_fromURI(GFFURI)
     GFFDataload(gff_File)
@@ -263,7 +279,11 @@ Coordinate_Covnerter4<-function(chromosome,genomic_start,genomic_end){
 Coordinate_Covnerter5_1<-function(transcript_id,TX_start,TX_end){
   ################
   ######Load Data
-  if(!exists("gff_File")){
+  if(!exists("gff_File") & file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
+    gff_File <<- system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz")
+    GFFDataload(gff_File)
+  }
+  else if(!exists("gff_File") & !file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
     GFFURI ="ftp://ftp.ensembl.org/pub/release-100/gff3/homo_sapiens/Homo_sapiens.GRCh38.100.gff3.gz"
     gff_File<<-download_GFF_fromURI(GFFURI)
     GFFDataload(gff_File)
@@ -319,7 +339,11 @@ Coordinate_Covnerter5_1<-function(transcript_id,TX_start,TX_end){
 Coordinate_Covnerter5_2<-function(transcript_id,TX_position){
   ################
   ######Load Data
-  if(!exists("gff_File")){
+  if(!exists("gff_File") & file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
+    gff_File <<- system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz")
+    GFFDataload(gff_File)
+  }
+  else if(!exists("gff_File") & !file.exists(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))){
     GFFURI ="ftp://ftp.ensembl.org/pub/release-100/gff3/homo_sapiens/Homo_sapiens.GRCh38.100.gff3.gz"
     gff_File<<-download_GFF_fromURI(GFFURI)
     GFFDataload(gff_File)
