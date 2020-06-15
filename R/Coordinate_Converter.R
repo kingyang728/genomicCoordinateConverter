@@ -26,7 +26,7 @@
 #' @import GenomicRanges
 #' @import IRanges
 #' @import S4Vectors
-#' @importFrom dplyr select
+#'
 #'
 #'
 #'

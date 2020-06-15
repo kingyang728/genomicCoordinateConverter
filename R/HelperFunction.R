@@ -29,8 +29,7 @@ download_GFF_fromURI<-function(GFFURI){
 #' @return
 #' @export
 #'
-#' @examples
-#' GFFDataload("~/Downloads/GIT/Tmp_Data/Homo_sapiens.GRCh38.99.gff3.gz")
+#'
 GFFDataload <- function(gff_File){
 
   if(exists("txDBPath") & file.exists("txDBPath")  & !exists("txdb")){
