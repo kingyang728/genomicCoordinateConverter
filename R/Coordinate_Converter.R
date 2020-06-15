@@ -431,7 +431,7 @@ Coordinate_Covnerter6<-function(chromosome,genomic_start,genomic_end,genomeVersi
 
       ChainGZfile = paste(path,"/",basename(ChainURI),sep = "")
       download.file(ChainURI,ChainGZfile)
-       R.utils::gunzip(ChainGZfile)
+      R.utils::gunzip(ChainGZfile)
       ChainFilepath <- tools::file_path_sans_ext(ChainGZfile)
 
     } else if(targetGenomeVersion=="hg18"){
@@ -445,14 +445,14 @@ Coordinate_Covnerter6<-function(chromosome,genomic_start,genomic_end,genomeVersi
       ChainURI = "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToHg19.over.chain.gz"
       ChainGZfile =  paste(path,"/",basename(ChainURI),sep = "")
       download.file(ChainURI,ChainGZfile)
-       R.utils::gunzip(ChainGZfile)
+      R.utils::gunzip(ChainGZfile)
       ChainFilepath <- tools::file_path_sans_ext(ChainGZfile)
 
     }else if(targetGenomeVersion=="hg38"){
       ChainURI = "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToHg38.over.chain.gz"
       ChainGZfile =  paste(path,"/",basename(ChainURI),sep = "")
       download.file(ChainURI,ChainGZfile)
-       R.utils::gunzip(ChainGZfile)
+      R.utils::gunzip(ChainGZfile)
       ChainFilepath <- tools::file_path_sans_ext(ChainGZfile)
 
     } else {print("chain file to target version missing,please download target file first ")
@@ -464,28 +464,28 @@ Coordinate_Covnerter6<-function(chromosome,genomic_start,genomic_end,genomeVersi
 
       ChainGZfile = paste(path,"/",basename(ChainURI),sep = "")
       download.file(ChainURI,ChainGZfile)
-       R.utils::gunzip(ChainGZfile)
+      R.utils::gunzip(ChainGZfile)
       ChainFilepath <- tools::file_path_sans_ext(ChainGZfile)
 
     } else if(targetGenomeVersion=="hg18"){
       ChainURI = "https://hgdownload.soe.ucsc.edu/goldenPath/hg17/liftOver/hg17ToHg18.over.chain.gz"
       ChainGZfile =  paste(path,"/",basename(ChainURI),sep = "")
       download.file(ChainURI,ChainGZfile)
-       R.utils::gunzip(ChainGZfile)
+      R.utils::gunzip(ChainGZfile)
       ChainFilepath <- tools::file_path_sans_ext(ChainGZfile)
 
     }else if(targetGenomeVersion=="hg19"){
       ChainURI = "https://hgdownload.soe.ucsc.edu/goldenPath/hg17/liftOver/hg17ToHg19.over.chain.gz"
       ChainGZfile =  paste(path,"/",basename(ChainURI),sep = "")
       download.file(ChainURI,ChainGZfile)
-       R.utils::gunzip(ChainGZfile)
+      R.utils::gunzip(ChainGZfile)
       ChainFilepath <- tools::file_path_sans_ext(ChainGZfile)
 
     }else if(targetGenomeVersion=="hg38"){
       ChainURI = "https://hgdownload.soe.ucsc.edu/goldenPath/hg17/liftOver/hg17ToHg38.over.chain.gz"
       ChainGZfile =  paste(path,"/",basename(ChainURI),sep = "")
       download.file(ChainURI,ChainGZfile)
-       R.utils::gunzip(ChainGZfile)
+      R.utils::gunzip(ChainGZfile)
       ChainFilepath <- tools::file_path_sans_ext(ChainGZfile)
 
     } else {print("chain file to target version missing,please download target file first ")
@@ -497,21 +497,21 @@ Coordinate_Covnerter6<-function(chromosome,genomic_start,genomic_end,genomeVersi
 
       ChainGZfile = paste(path,"/",basename(ChainURI),sep = "")
       download.file(ChainURI,ChainGZfile)
-       R.utils::gunzip(ChainGZfile)
+      R.utils::gunzip(ChainGZfile)
       ChainFilepath <- tools::file_path_sans_ext(ChainGZfile)
 
     } else if(targetGenomeVersion=="hg17"){
       ChainURI = "http://hgdownload.cse.ucsc.edu/goldenpath/hg18/liftOver/hg18ToHg17.over.chain.gz"
       ChainGZfile =  paste(path,"/",basename(ChainURI),sep = "")
       download.file(ChainURI,ChainGZfile)
-       R.utils::gunzip(ChainGZfile)
+      R.utils::gunzip(ChainGZfile)
       ChainFilepath <- tools::file_path_sans_ext(ChainGZfile)
 
     }else if(targetGenomeVersion=="hg38"){
       ChainURI = "http://hgdownload.cse.ucsc.edu/goldenpath/hg18/liftOver/hg18ToHg38.over.chain.gz"
       ChainGZfile = paste(path,"/",basename(ChainURI),sep = "")
       download.file(ChainURI,ChainGZfile)
-       R.utils::gunzip(ChainGZfile)
+      R.utils::gunzip(ChainGZfile)
       ChainFilepath <- tools::file_path_sans_ext(ChainGZfile)
     } else {print("chain file to target version missing,please download target file first ")
       return(NULL)}
