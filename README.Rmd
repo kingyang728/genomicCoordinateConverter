@@ -18,23 +18,17 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of genomicCoordinateConverter is to provide functionalities supporting convert coordinate to amino acid information.The package contains 6 main converter functionalities:
-  genomic location (default genome: HG38), nucleotide exchange -> HUGO Symbol, transcript ID, position in primary transcript, exchanged amino acid
-  genomic location (default genome: HG38), nucleotide exchange -> HUGO Symbol, for all transcripts :transcript ID, position exchanged amino acid
-  genomic location (default genome: HG38) -> HUGO Symbol, list of all transcript ID
-  genomic location (default genome: HG38), nucleotide exchange ->  HUGO symbol, exon number
-  transcript ID, position , target genome -> genomic location, triplet and number in triplet
-  Genomeversion, genomic location, taget genomeversion -> genomic location
+The goal of genomicCoordinateConverter is to provide functionalities supporting convert coordinate to amino acid information.The package contains 6 main converter functionalities: <br/>
+* genomic location (default genome: HG38), nucleotide exchange -> HUGO Symbol, transcript ID, position in primary transcript, exchanged amino acid <br/>
+* genomic location (default genome: HG38), nucleotide exchange -> HUGO Symbol, for all transcripts :transcript ID, position exchanged amino acid <br/>
+* genomic location (default genome: HG38) -> HUGO Symbol, list of all transcript ID <br/>
+* genomic location (default genome: HG38), nucleotide exchange ->  HUGO symbol, exon number <br/>
+* transcript ID, position , target genome -> genomic location, triplet and number in triplet <br/>
+* Genomeversion, genomic location, taget genomeversion -> genomic location <br/>
 
 ## Installation
 
-You can install the released version of genomicCoordinateConverter from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("genomicCoordinateConverter")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the  development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
