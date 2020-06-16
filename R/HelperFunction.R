@@ -33,10 +33,17 @@ download_GFF_fromURI<-function(GFFURI){
 #' GFFDataload(system.file(package="genomicCoordinateConverter", "extdata","Homo_sapiens.GRCh38.100.gff3.gz"))
 GFFDataload <- function(gff_File){
 
-  if(exists("txDBPath") & file.exists("txDBPath")  & !exists("txdb")){
+  txdbName <- tools::file_path_sans_ext(gff_File)
+  txDBPathFromGFF <-paste(txdbName,"txdb.sqlite",sep = "_")
+  if(file.exists(txDBPathFromGFF)& !exists("txdb")){
+    txDBPath <<-txDBPathFromGFF
+    txdb <<- loadDb(txDBPath)
+    seqlevelsStyle(txdb) <- "UCSC"
+
+  } else if(exists("txDBPath") & file.exists(txDBPath)  & !exists("txdb")){
     txdb <<- AnnotationDbi::loadDb(txDBPath)
     seqlevelsStyle(txdb) <- "UCSC"
-  } else if(exists("txDBPath") & !file.exists("txDBPath")  & !exists("txdb")){
+  } else if(exists("txDBPath") & !file.exists(txDBPath)  & !exists("txdb")){
     txdb <<- makeTxDbFromGFF(gff_File,organism="Homo sapiens")
     seqlevelsStyle(txdb) <- "UCSC"
     txdbName <- tools::file_path_sans_ext(gff_File)
